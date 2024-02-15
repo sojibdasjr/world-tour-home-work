@@ -1,0 +1,12 @@
+.visited_country_container{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    border: 1px solid wheat;
+    margin-bottom: 10px;
+    
+}
+.visited_country_container img{
+    width: 50px;
+}

@@ -2,6 +2,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* margin: px; */
     gap: 20px;
+}
+.visitedCountry_container{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.visitedCountry{
+    border: 1px solid white;
+    margin-bottom: 20px;
+    padding: 20px;
 }

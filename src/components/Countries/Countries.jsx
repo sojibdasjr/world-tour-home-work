@@ -23,14 +23,16 @@ const Countries = () => {
         Total : <b style={{ color: "red" }}>{countries.length}</b> Countries
       </h3>
       {/* My visited country */}
-      <h4>My Visited Country : {visited.length} </h4>
-      <div>
-        {visited.map((country) => (
-          <VisitedCountry
-            visitedCountry={country}
-            key={country.cca3}
-          ></VisitedCountry>
-        ))}
+      <div className="visitedCountry">
+        <h4>My Visited Country : {visited.length} </h4>
+        <div className="visitedCountry_container">
+          {visited.map((country) => (
+            <VisitedCountry
+              visitedCountry={country}
+              key={country.cca3}
+            ></VisitedCountry>
+          ))}
+        </div>
       </div>
       <div className="countries_container">
         {countries.map((country) => (
