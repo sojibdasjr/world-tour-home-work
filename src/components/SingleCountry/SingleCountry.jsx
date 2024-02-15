@@ -1,14 +1,35 @@
+import { useState } from "react";
 import "./SingleCountry.css";
-const SingleCountry = ({ countryProps }) => {
+const SingleCountry = ({ countryProps, handleMyVisit }) => {
   const { name, capital, flags, population } = countryProps;
+  const [isVisit, setIsVisit] = useState(false);
+  const handleVisite = () => {
+    setIsVisit(!isVisit);
+    handleMyVisit(countryProps);
+  };
   return (
     <>
       {/* This Component for the Single Country Stacture */}
-      <div className="_singleCountry_container">
-        <div>
-          <h3>Country Name : {name.common} </h3>
-          <h4>Capital Name : {capital}</h4>
-          <h4>Total Population : {population}</h4>
+      <div
+        className={
+          isVisit
+            ? "_singleCountry_container_afterVisit _singleCountry_container_after"
+            : "_singleCountry_container"
+        }
+      >
+        <div className="about_countries">
+          <small>Country : {name.common} </small> <br />
+          <small>Capital : {capital}</small> <br />
+          <small>Population : {population}</small>
+          <hr />
+          <button onClick={handleVisite}>
+            {isVisit ? "Visited" : "Visit"}
+          </button>{" "}
+          <br />
+          <small style={isVisit ? { color: "yellow" } : { color: "" }}>
+            {" "}
+            {isVisit && " I have visited"}
+          </small>
         </div>
 
         <img src={flags.png} alt="" />

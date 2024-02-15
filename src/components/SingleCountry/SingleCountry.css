@@ -1,13 +1,41 @@
 ._singleCountry_container{
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+   flex: 20%;
     border: 1px solid white;
     margin-bottom: 15px;
+    padding-left: 6px;
+}
+._singleCountry_container_afterVisit
+{
+    display: flex;
+   flex: 20%;
+    margin-bottom: 15px;
+    padding-left: 6px;
+    background-color: rgb(108, 68, 156);
+    border: 1px solid white;
+}
+._singleCountry_container_afterVisit img{
+    height: 150px;
+    width: 250px;
+    margin-left: 20px;
 }
 
 ._singleCountry_container img{
-    width: 200px;
-    margin-left: 90px;
-
+    height: 150px;
+    width: 250px;
+    margin-left: 20px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    ._singleCountry_container {
+       display: flex;
+       column-gap: 41px;
+    }
+    ._singleCountry_container_after {
+       display: flex;
+       column-gap: 41px;
+    }
+
+   
+  }
