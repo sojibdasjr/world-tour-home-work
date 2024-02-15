@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import SingleCountry from "../SingleCountry/SingleCountry";
 import "./Countries.css";
+import VisitedCountry from "../VisitedCountry/VisitedCountry";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
@@ -23,6 +24,14 @@ const Countries = () => {
       </h3>
       {/* My visited country */}
       <h4>My Visited Country : {visited.length} </h4>
+      <div>
+        {visited.map((country) => (
+          <VisitedCountry
+            visitedCountry={country}
+            key={country.cca3}
+          ></VisitedCountry>
+        ))}
+      </div>
       <div className="countries_container">
         {countries.map((country) => (
           <SingleCountry
