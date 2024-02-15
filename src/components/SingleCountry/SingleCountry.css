@@ -1,0 +1,13 @@
+._singleCountry_container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid white;
+    margin-bottom: 15px;
+}
+
+._singleCountry_container img{
+    width: 200px;
+    margin-left: 90px;
+
+}
