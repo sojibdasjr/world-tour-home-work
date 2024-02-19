@@ -1,6 +1,6 @@
 import "./VisitedCountry.css";
 const VisitedCountry = ({ visitedCountry }) => {
-  console.log(visitedCountry);
+  //flag
   const { name, flags } = visitedCountry;
   return (
     <div className="visited_country_container">

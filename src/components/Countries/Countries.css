@@ -16,3 +16,18 @@
     margin-bottom: 20px;
     padding: 20px;
 }
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .visitedCountry_container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .visitedCountry{
+    width: 100%;
+  }
+
+   
+  }
